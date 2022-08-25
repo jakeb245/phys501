@@ -1,4 +1,4 @@
-import matplotlib.pylplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 
 # Quadratic drag horizontal motion
@@ -26,9 +26,14 @@ def velocity(t, c=0.2, m=80, v0=20):
 
 if __name__ == '__main__':
     # Set range of t
-    t = np.linspace(0, 20, 1000)
-    v = velocity(t)
+    time = np.linspace(0, 60, 1000)
+    v = velocity(time)
     # Begin plotting
     fig = plt.figure()
-    plt.plot(t, v)
+    plt.plot(time, v, label='Velocity (m/s)')
+    plt.xlabel("Time (s)")
+    plt.ylabel("Velocity (m/s)")
+    plt.title("Velocity of Cyclist over Time (Jacob Buchanan)")
+    plt.grid()
+    plt.legend()
     plt.savefig("2d.png")
