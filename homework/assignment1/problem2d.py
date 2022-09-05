@@ -29,7 +29,7 @@ if __name__ == '__main__':
     time = np.linspace(0, 60, 1000)
     v = velocity(time)
     # Begin plotting
-    fig = plt.figure()
+    fig = plt.figure(dpi=1200)
     plt.plot(time, v, label='Velocity (m/s)')
     plt.xlabel("Time (s)")
     plt.ylabel("Velocity (m/s)")
